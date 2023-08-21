@@ -46,4 +46,28 @@ class Owner {
   String ic;
 
   Owner(this.ic, {required this.name, required this.gender, required this.age});
+
+  void printOwner() {
+    print("Owner IC: " + this.ic);
+    print("Owner Name: " + this.name);
+    print("Owner Gender: " + this.gender);
+    print("Owner Age: " + this.age.toString());
+  }
+}
+
+class Person extends Owner {
+  String? phone;
+  String? address;
+  Person(super.ic,
+      {required super.name,
+      required super.gender,
+      required super.age,
+      this.phone,
+      this.address});
+
+  void printPerson() {
+    super.printOwner();
+    print("Phone: " + this.phone.toString());
+    print("Address: " + this.address.toString());
+  }
 }
