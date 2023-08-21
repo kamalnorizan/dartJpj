@@ -8,9 +8,18 @@ void main() {
   Car car3 = new Car("Sedan", "Honda",
       color: "Black", cc: 1.8, year: 2017, owner: owner2);
 
-  car1.printCar();
-  car2.printCar();
-  car3.printCar();
+  // car1.printCar();
+  // car2.printCar();
+  // car3.printCar();
+
+  Person person1 = new Person(owner1.ic,
+      name: owner1.name,
+      gender: owner1.gender,
+      age: owner1.age,
+      phone: '0123456456',
+      address: 'No 1, Jalan 1, 12345, Kuala Lumpur');
+
+  person1.printPerson();
 }
 
 class Car {
@@ -48,10 +57,10 @@ class Owner {
   Owner(this.ic, {required this.name, required this.gender, required this.age});
 
   void printOwner() {
-    print("Owner IC: " + this.ic);
-    print("Owner Name: " + this.name);
-    print("Owner Gender: " + this.gender);
-    print("Owner Age: " + this.age.toString());
+    print("IC: " + this.ic);
+    print("Name: " + this.name);
+    print("Gender: " + this.gender);
+    print("Age: " + this.age.toString());
   }
 }
 
